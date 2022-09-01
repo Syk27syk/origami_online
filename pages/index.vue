@@ -47,11 +47,13 @@ export default {
       script: [
         {
           async: true,
+          type: 'module',
           src: 'https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js'
         },
         {
-          type: 'importmap',
+          type: 'module',
           imports: {
+            type: 'module',
             three: 'https://unpkg.com/three@<version>/build/three.module.js'
           }
         },
@@ -101,7 +103,6 @@ export default {
         controls.update();
         this.renderer.render(this.scene, this.camera);
       }
-
       animate()
     }
   },
