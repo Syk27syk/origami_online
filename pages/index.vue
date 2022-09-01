@@ -72,6 +72,7 @@ export default {
       const geometry = new THREE.PlaneGeometry(10, 3, 16, 100)
       const material = new THREE.MeshBasicMaterial({ color: 0xFF6347, wireframe: true });
       const plane = new THREE.Mesh(geometry, material);
+      const controls = new OrbitControls(this.camera, this.renderer.domElement);
       // renderer.render( scene, camera);
 
       // render
@@ -88,9 +89,6 @@ export default {
       const lightHelper = new THREE.PointLightHelper(pointLight)
       const gridHelper = new THREE.GridHelper(200, 50);
       this.scene.add(lightHelper, gridHelper)
-
-      // orbit controls
-      const controls = new OrbitControls(this.camera, this.renderer.domElement);
 
       // animate
       function animate() {
