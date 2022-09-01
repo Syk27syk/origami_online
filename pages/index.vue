@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 export default {
   data() {
@@ -61,7 +61,7 @@ export default {
     }
   },
   mounted() {
-    this.init()
+    this.init;
   },
   methods: {
     init() {
